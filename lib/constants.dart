@@ -7,3 +7,5 @@ const kTransitionDuration = Duration(milliseconds: 3);
 const kGTSectraFine = 'GTSectraFine';
 
 const kFeaturedBox = 'featured_box';
+
+const kNewestBox = 'newest_box';
