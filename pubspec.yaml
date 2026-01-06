@@ -44,6 +44,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   bloc: ^9.2.0
   meta: ^1.17.0
+  get_it: ^9.2.0
 
 
 dev_dependencies:
