@@ -8,10 +8,18 @@ class FeturedListViewBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var nextPage = 1;
     return BlocBuilder<FeaturedBooksCubit, FeaturedBooksState>(
       builder: (context, state) {
         if (state is FeaturedBooksSuccess) {
-          return FeaturedListView(books: state.books);
+          return FeaturedListView(
+            books: state.books,
+            onFetchMore: () {
+              context.read<FeaturedBooksCubit>().fetchFeaturedBooks(
+                pageNumber: nextPage++,
+              );
+            },
+          );
         } else if (state is FeaturedBooksFailure) {
           return Text(state.errMessage);
         } else {
