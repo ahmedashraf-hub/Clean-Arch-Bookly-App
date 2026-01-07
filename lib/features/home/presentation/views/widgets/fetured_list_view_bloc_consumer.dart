@@ -29,7 +29,7 @@ class _FeturedListViewBlocConsumerState
         if (state is FeaturedBooksPaginationFailure) {
           ScaffoldMessenger.of(
             context,
-          ).showSnackBar(buildErrorSnackbar(state, context));
+          ).showSnackBar(buildErrorSnackbar(state.errMessage, context));
         }
       },
       builder: (context, state) {
